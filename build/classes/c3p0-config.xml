@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+
+	<named-config name="testc3p0">
+		<!-- 在连接池中获取连接时测试连接的有效性 -->
+		<property name="testConnectionOnCheckout">true</property>
+		<!-- 在连接池中归还连接时测试连接的有效性 -->
+		<property name="testConnectionOnCheckin">true</property>
+		<!-- 指定连接数据源的基本属性 -->
+		<property name="jdbcUrl">jdbc:mysql://localhost:3306/programming_learning</property>
+		<property name="driverClass">com.mysql.cj.jdbc.Driver</property>
+		<property name="user">root</property>
+		<property name="password">qxxpdada</property>
+
+		<!-- 若数据库中连接数不足时, 一次向数据库服务器申请多少个连接 -->
+		<property name="acquireIncrement">5</property>
+		<!-- 初始化数据库连接池时连接的数量 -->
+		<property name="initialPoolSize">20</property>
+		<!-- 数据库连接池中的最小的数据库连接数 -->
+		<property name="minPoolSize">2</property>
+		<!-- 数据库连接池中的最大的数据库连接数 -->
+		<property name="maxPoolSize">40</property>
+
+	</named-config>
+
+</c3p0-config>
